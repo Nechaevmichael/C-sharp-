@@ -5,11 +5,11 @@
 // 782 -> 72
 // 918 -> 98
 
-int number = new Random().Next(10, 1000);
-int MaxDigit(int number)
+int number = new Random().Next(100, 1000);
+int MaxDigit(int num)
 {
-    int firstDigit = number / 100 * 10;
-    int secondDigit = number % 10;
+    int firstDigit = num / 100 * 10;
+    int secondDigit = num % 10;
     return firstDigit + secondDigit;
 }
 int result = MaxDigit(number);
