@@ -7,11 +7,17 @@ int maximum = a;
 if (maximum < b)
 {
     maximum = b;
-
-    if (maximum < c)
-    {
-        maximum = c;
-    }
 }
-
+else
+{
+    maximum = a;
+}
+if (maximum < c)
+{
+    maximum = c;
+}
+else
+{
+    maximum = b;
+}
 Console.Write(maximum);
