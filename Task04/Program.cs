@@ -16,8 +16,5 @@ if (maximum < c)
 {
     maximum = c;
 }
-else
-{
-    maximum = b;
-}
+
 Console.Write(maximum);
