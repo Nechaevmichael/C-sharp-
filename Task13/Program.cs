@@ -3,6 +3,15 @@
 // 78 -> третьей цифры нет
 // 32679 -> 6
 
-Console.Write("Введите цифру: ");
-string digit = Console.ReadLine();
-if (digit < 100 $$ digit > -100) Console.Write("Третьей цифры нет");
+Console.Write("Введите число: ");
+int digit = Convert.ToInt32(Console.ReadLine());
+int digit_1 = digit;
+if (digit > -100 && digit < 100) Console.WriteLine("Третьей цифры нет!");
+else
+{
+    while (digit > 999 || digit < -999)
+        digit /= 10;
+    if (digit < 0 && digit > -999) digit *= (-1);
+    digit = digit % 10;
+    Console.WriteLine($"{digit_1} -> {digit}");
+}
