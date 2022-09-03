@@ -5,3 +5,4 @@
 
 Console.Write("Введите цифру: ");
 string digit = Console.ReadLine();
+if (digit < 100 $$ digit > -100) Console.Write("Третьей цифры нет");
