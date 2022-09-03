@@ -3,9 +3,12 @@
 // 782 -> 8
 // 918 -> 1
 
-Console.Write("Введите число от 0 до 1000: ");
+Console.Write("Введите число от 100 до 1000: ");
 int a = Convert.ToInt32(Console.ReadLine());
 
-int result = a % 100 / 10;
-
-Console.WriteLine($"{a} -> {result}");
+if (a >= 100 || a <= -100)
+{
+    int result = a % 100 / 10;
+    Console.WriteLine($"{a} -> {result}");
+}
+else Console.WriteLine("Вы ввели не трёхзначное число");
