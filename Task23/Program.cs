@@ -11,7 +11,7 @@ void cube(int num)
     int i = 1;
     while (i <= num)
     {
-        int cube_number = i * i * i;
+        int cube_number = Convert.ToInt32(Math.Pow(i, 3));
         Console.Write($"{i}, ");
         Console.WriteLine(cube_number);
         i += 1;
