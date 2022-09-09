@@ -8,9 +8,10 @@ int[] arr = new int[8];
 void FillArray(int[] array)
 {
     int count = array.Length;
+    Random rnd = new Random();
     for (int i = 0; i < count; i++)
     {
-        array[i] = new Random().Next(0, 2);
+        array[i] = rnd.Next(0, 2);
     }
 }
 
