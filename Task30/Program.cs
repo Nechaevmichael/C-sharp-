@@ -17,9 +17,9 @@ void FillArray(int[] array)
 void PrintArray(int[] array)
 {
     int count = array.Length;
-    Console.Write("[");
     for (int i = 0; i < count; i++)
     {
+        if (i == 0) Console.Write("[");
         if (i == count - 1) Console.Write($"{array[i]}]");
         else Console.Write($"{array[i]}, ");
     }
