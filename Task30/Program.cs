@@ -5,7 +5,7 @@
 
 int[] arr = new int[8];
 
-void Array(int[] array)
+void FillArray(int[] array)
 {
     int count = array.Length;
     for (int i = 0; i < count; i++)
@@ -17,11 +17,13 @@ void Array(int[] array)
 void PrintArray(int[] array)
 {
     int count = array.Length;
+    Console.Write("[");
     for (int i = 0; i < count; i++)
     {
-        Console.Write($"{array[i]} ");
+        if (i == count - 1) Console.Write($"{array[i]}]");
+        else Console.Write($"{array[i]}, ");
     }
 }
 
-Array(arr);
+FillArray(arr);
 PrintArray(arr);
