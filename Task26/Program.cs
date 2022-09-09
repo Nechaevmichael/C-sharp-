@@ -10,7 +10,6 @@ int number = Convert.ToInt32(Console.ReadLine());
 int CountDigit(int num)
 { 
     int count = default;
-    int i = 1;
     while (num > 0)
     {
         num = num / 10;
