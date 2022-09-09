@@ -21,3 +21,17 @@ int SumNumbers(int num)
 }
 int result = SumNumbers(number);
 Console.WriteLine(result);
+
+int SumNumbers1(int num)
+{
+    int i = 1;
+    int sum = default;
+    while (i <= num)
+    {
+        sum += i;
+        i += 1;
+    }
+    return sum;
+}
+int res = SumNumbers1(number);
+Console.WriteLine(res);
