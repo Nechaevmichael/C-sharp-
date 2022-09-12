@@ -14,7 +14,6 @@ int Degree(int num, int degnum)
         num = 1;
         return num;
     }
-    
     else
     {
         int res = 1;
