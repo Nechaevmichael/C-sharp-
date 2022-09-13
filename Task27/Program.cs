@@ -31,3 +31,16 @@ int sumDigit(int num)
 }
 int result = sumDigit(number);
 Console.WriteLine($"{number} >- {result}");
+
+// int number = Convert.ToInt32(Console.ReadLine());
+// int sum(int num)
+// {
+//     int result1 = 0;
+//     while(number > 0)
+//     {
+//     result1 += number % 10;
+//     number /= 10;
+//     }
+// }
+// int result = sum(number);
+// Console.WriteLine(result);
