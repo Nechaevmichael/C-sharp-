@@ -40,7 +40,7 @@ bool ArraySearch(int[] array, int search1)
     }
     return exist;
 }
-int[] arr = CreateArrayRndInt(3, -1, 100);
+int[] arr = CreateArrayRndInt(10, -100, 100);
 PrintArray(arr);
 Console.WriteLine();
 Console.WriteLine("Введите число для поиска в массиве: ");
