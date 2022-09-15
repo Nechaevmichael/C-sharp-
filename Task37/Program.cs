@@ -40,7 +40,7 @@ int[] ProductPairsDigit(int[] array)
     return newArray;
 }
 Console.WriteLine();
-int[] arr = CreateArrayRndInt(9, 1, 5);
+int[] arr = CreateArrayRndInt(5, 100, 999);
 PrintArray(arr);
 int[] result = ProductPairsDigit(arr);
 Console.WriteLine();
