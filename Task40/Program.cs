@@ -4,3 +4,17 @@
 // Теорема о неравенстве треугольника: каждая сторона треугольника
 // меньше суммы двух других сторон.
 
+Console.WriteLine("Введите первую сторону треугольника: ");
+int AB = Convert.ToInt32(Console.ReadLine());
+
+Console.WriteLine("Введите вторую сторону треугольника: ");
+int BC = Convert.ToInt32(Console.ReadLine());
+
+Console.WriteLine("Введите третью сторону треугольника: ");
+int CA = Convert.ToInt32(Console.ReadLine());
+
+if ((AB + BC) > CA && (BC + CA) > AB && (CA + AB) > BC)
+{
+    Console.WriteLine("Треугольник существует.");
+}
+else Console.WriteLine("Треугольнгик не существует.");
