@@ -7,7 +7,7 @@
 Console.WriteLine("Введите число: ");
 int num = Convert.ToInt32(Console.ReadLine());
 
-int[] Febonachi(int number)
+int[] Fibonacci(int number)
 {
     int[] array = new int[number];
     array[0] = 0;
@@ -28,5 +28,5 @@ void PrintArray(int[] array)
     }
 }
 
-int[] arr = Febonachi(num);
+int[] arr = Fibonacci(num);
 PrintArray(arr);
