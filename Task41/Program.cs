@@ -11,7 +11,7 @@ int[] CreateArray(int sizeArray)
     int i = 0;
     while (i < sizeArray)
     {
-        Console.Write("Введите цифру: ");
+        Console.Write($"Введите цифру №{i + 1}: ");
         int digit = Convert.ToInt32(Console.ReadLine());
         array[i] = digit;
         i += 1;
@@ -33,7 +33,7 @@ int SearchDigit(int[] arr)
     int j = 0;
     while (j < arr.Length)
     {
-        if (arr[j] < 0) count += 1;
+        if (arr[j] > 0) count += 1;
         j += 1;
     }
     return count;
@@ -42,7 +42,7 @@ int SearchDigit(int[] arr)
 int[] arr = CreateArray(countDigit);
 PrintArray(arr);
 int result = SearchDigit(arr);
-Console.WriteLine($"Количество чисел больше 0 составляет {result}");
+Console.WriteLine($"Количество чисел больше 0 составляет: {result}");
 
 // Console.Write("Введите желаемое количество цифр: ");
 // int count = Convert.ToInt32(Console.ReadLine());
