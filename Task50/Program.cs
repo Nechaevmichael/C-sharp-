@@ -34,9 +34,6 @@ void PrintMatrix(int[,] matrix)
     }
 }
 
-Console.Write($"Введите позицию элемента в массиве: ");
-int position = Convert.ToInt32(Console.ReadLine());
-
 void SearchDigit(int[,] array, int pos)
 {
     int row = pos / 10;
@@ -48,5 +45,8 @@ void SearchDigit(int[,] array, int pos)
 int[,] array2D = CreateMatrixRndInt(3, 4);
 
 PrintMatrix(array2D);
+
+Console.Write($"Введите позицию элемента в массиве: ");
+int position = Convert.ToInt32(Console.ReadLine());
 
 SearchDigit(array2D, position);
