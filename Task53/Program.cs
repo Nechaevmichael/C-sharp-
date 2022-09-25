@@ -17,41 +17,32 @@ int[,] CreateMatrixRndInt(int rows, int columns, int min, int max)
 
 void PrintarrayInt(int[,] matrix)
 {
-    
+
     for (int i = 0; i < matrix.GetLength(0); i++)
     {
         Console.Write("|");
         for (int j = 0; j < matrix.GetLength(1); j++)
         {
-           if (j < matrix.GetLength(1) - 1) Console.Write($"{matrix[i, j], 3}");
-           else Console.Write($"{matrix[i, j], 3} ");
+            if (j < matrix.GetLength(1) - 1) Console.Write($"{matrix[i, j],5}");
+            else Console.Write($"{matrix[i, j],5} ");
         }
         Console.WriteLine("|");
     }
 }
 
-int[,] ChangeMatrix(int[,] matrix)
+void ChangeMatrix(int[,] matrix)
 {
-    int temp = default;
-    int linesCount = matrix.GetLength(0);
-    int columnsCount = matrix.GetLength(1);
-    for (int i = 0; i < matrix.GetLength(0); i++)
+    for (int j = 0; j < matrix.GetLength(1); j++)
     {
-        for (int j = 0; j < matrix.GetLength(1); j++)
-        {
-            if (i == 0)
-            {
-                temp = matrix[i, j];
-                matrix[i, j] = matrix[linesCount - 1 , j];
-                matrix[linesCount - 1, j] = temp;
-            }
-        }
+        int temp = matrix[0, j];
+        matrix[0, j] = matrix[matrix.GetLength(0) - 1, j];
+        matrix[matrix.GetLength(0) - 1, j] = temp;
     }
-    return matrix;
 }
 
-int[,] array2D = CreateMatrixRndInt(4, 4, 1, 10);
+
+int[,] array2D = CreateMatrixRndInt(10, 10, -100, 100);
 PrintarrayInt(array2D);
-int[,] changearray2D = ChangeMatrix(array2D);
+ChangeMatrix(array2D);
 Console.WriteLine();
-PrintarrayInt(changearray2D);
+PrintarrayInt(array2D);
