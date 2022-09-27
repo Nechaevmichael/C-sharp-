@@ -6,7 +6,7 @@
 Console.Write("Введите число A: ");
 int num = Convert.ToInt32(Console.ReadLine());
 
-Console.Write("Введите число B: ");
+Console.Write("Введите степень для возведения: ");
 int degree = Convert.ToInt32(Console.ReadLine());
 // Console.ForegroundColor=ConsoleColor.White;
 // Console.ResetColor();
