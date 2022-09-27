@@ -40,9 +40,12 @@ void PrintMatrix(int[,] matr)
     }
 }
 
-int FindMin(int[,] arr)
+int[] FindMin(int[,] arr)
 {
     int min = arr[0, 0];
+    int indexminI = 0;
+    int indexminJ = 0;
+    int[] indexmin = new int[2];
     for (int i = 0; i < arr.GetLength(0); i++)
     {
         for (int j = 0; j < arr.GetLength(1); j++)
@@ -50,14 +53,47 @@ int FindMin(int[,] arr)
             if (min > arr[i, j])
             {
                 min = arr[i, j];
+                indexminI = i;
+                indexminJ = j;
+                indexmin[0] = indexminI;
+                indexmin[1] = indexminJ;
             } 
         }
     }
-    return min;
+    return indexmin;
 }
+
+int[,] DeleteRowColumn(int[] index, int[,] matr)
+{
+    int[,] newmatrix = new int[matr.GetLength(0) - 1, matr.GetLength(1) - 1];
+    for (int i = 0; i < matr.GetLength(0); i++)
+    {
+        for (int j = 0; j < matr.GetLength(1); j++)
+        {
+            if (i != index[0] && j != index[1])
+            {
+                newmatrix[i, j] = matr[i, j];
+            }
+        }
+    }
+    return newmatrix;
+}
+
+void PrintArray(int[] arr)
+{
+    for (int i = 0; i < arr.Length; i++)
+    {
+        if (i < arr.Length - 1) Console.Write($"{arr[i]}, ");
+        else Console.Write($"{arr[i]}");
+    }
+}
+
+
 
 int[,] matrix = CreateMatrix(4, 4, 1, 10);
 PrintMatrix(matrix);
-int minimum = FindMin(matrix);
 Console.WriteLine();
-Console.WriteLine($"Минимальное значение массива равно: {minimum}.");
+int[] array = FindMin(matrix);
+PrintArray(array);
+int[,] newMatrix = DeleteRowColumn(array, matrix);
+PrintMatrix(newMatrix);
