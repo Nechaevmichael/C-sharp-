@@ -8,6 +8,8 @@ int numM = Convert.ToInt32(Console.ReadLine());
 
 Console.Write("Введите число N: ");
 int numN = Convert.ToInt32(Console.ReadLine());
+// Console.ForegroundColor=ConsoleColor.White;
+// Console.ResetColor();
 
 Console.Write($"M = {numM}; N = {numN} -> ");
 void NaturalNumbers(int numberM, int numberN)
