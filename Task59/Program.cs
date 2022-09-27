@@ -30,13 +30,13 @@ void PrintMatrix(int[,] matr)
 {
     for (int i = 0; i < matr.GetLength(0); i++)
     {
-        Console.Write("|");
+        Console.Write("");
         for (int j = 0; j < matr.GetLength(1); j++)
         {
             if (j < matr.GetLength(1) - 1) Console.Write($"{matr[i, j], 2} ");
             else Console.Write($"{matr[i, j], 2} ");
         }
-        Console.WriteLine("|");
+        Console.WriteLine("");
     }
 }
 
@@ -88,12 +88,12 @@ void PrintArray(int[] arr)
     }
 }
 
-
-
 int[,] matrix = CreateMatrix(4, 4, 1, 10);
 PrintMatrix(matrix);
 Console.WriteLine();
 int[] array = FindMin(matrix);
+Console.Write("Индекс наименьшего значения равен: ");
 PrintArray(array);
+Console.WriteLine();
 int[,] newMatrix = DeleteRowColumn(array, matrix);
 PrintMatrix(newMatrix);
