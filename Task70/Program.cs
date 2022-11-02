@@ -1,4 +1,6 @@
-﻿Console.WriteLine("Введите количество элементов массива: ");
+﻿// Необходимо отсортировать массив  
+
+Console.WriteLine("Введите количество элементов массива: ");
 int n = Convert.ToInt32(Console.ReadLine());
 int[] array = new int[n];
 for (int i = 0; i < n; i++)
